@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사계 4분할 레이아웃</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 100vh;
+            width: 100vw;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .season {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .spring { color: #f70773; background: linear-gradient(to right bottom, #FFD2E6, #FFC8DD); }
+        .summer { color: #2db4ea; background: linear-gradient(to right bottom, #CDE9FE, #BDE0FE); }
+        .autumn { color: #68310a; background: linear-gradient(to right bottom, #fbd3b2, #edc4b3); }
+        .winter { color: #5c025d; background: linear-gradient(to right bottom, #DAC6E3, #CDB4DB); }
+
+        .season:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .season-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .season-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="season spring">
+            <p class="season-title">봄 (Spring)</p>
+            <p class="season-description">
+                <strong>기간:</strong> 3월 20일(또는 21일)부터 6월 21일(또는 22일)<br>
+                <strong>특징:</strong> 봄은 겨울에서 봄으로 넘어가는 과정으로,<br>
+                 날씨가 점점 따뜻해지고 식물이 싹을 피우고 꽃이 피기 시작합니다.<br>
+                 나무에 싹이 돋아나는 모습이 대표적이며,<br>
+                  새로운 생명이 태어나는 계절로 알려져 있습니다.<br>
+                  기온이 올라가면서 색다른 활동이 활발하게 이루어집니다.<br>
+            </p>
+        </div>
+        <div class="season summer">
+            <p class="season-title">여름 (Summer)</p>
+            <p class="season-description">
+                <strong>기간:</strong> 6월 21일(또는 22일)부터 9월 22일(또는 23일)<br>
+                <strong>특징:</strong>여름은 일반적으로 가장 더운 계절로,<br>
+                낮 동안의 일조량이 길어지고 온도가 상승합니다.<br>
+                해변, 수영, 캠핑 등 여름 휴가 활동이 활발하게 이루어지며,<br>
+                시원한 음료와 각종 여름 행사가 인기를 끕니다.<br>
+        </div>
+        <div class="season autumn">
+            <p class="season-title">가을 (Autumn 또는 Fall)</p>
+            <p class="season-description">
+                <strong>기간:</strong> 9월 22일(또는 23일)부터 12월 21일(또는 22일)<br>
+                <strong>특징:</strong> 가을은 날씨가 서서히 선선해지며 나뭇잎이 붉게 변하고 떨어지는 계절입니다.<br>
+                수확의 계절로서, 곡물이 익어가는 모습이 특징이며, 가을 단풍이 아름답습니다.<br>
+                단풍 여행과 같은 가을 행사가 인기를 끕니다. </p>
+        </div>
+        <div class="season winter">
+            <p class="season-title">겨울 (Winter)</p>
+            <p class="season-description">
+                <strong>기간:</strong> 12월 21일(또는 22일)부터 3월 20일(또는 21일)<br>
+                <strong>특징:</strong> 겨울은 일반적으로 가장 추운 계절이며<br>
+                 눈이 내리고 대부분의 식물이 휴면 상태에 들어가는 시기입니다.<br>
+                 크리스마스와 같은 겨울 축제가 열리는 계절이기도 합니다.<br>
+                 따뜻한 옷을 입고 눈싸움이나 스키 등의 겨울 활동이 인기를 끕니다.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
